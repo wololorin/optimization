@@ -23,7 +23,7 @@ while err > opts.tol
     fls = @(t)(f(x(1)- t*g(1), x(2) - t*g(2)));
     
     % Line search
-    t = fminbnd(fls, 0, 10);
+    t = fminbnd(fls, 0, 1e1);
     
     % Update
     x = x - t*g';
