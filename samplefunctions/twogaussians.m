@@ -1,4 +1,7 @@
-function [f, g] = twogaussians(x, y)
+function [f, g] = twogaussians(x)
+y = x(2);
+x = x(1);
+
 if(nargin<2)
     f = @(x,y)(-(exp(-((x -3).^2+(y-4).^2)/3) + 0.5*exp(-((x-1).^2 + (y-1).^2))/2));
     ezsurf(f);

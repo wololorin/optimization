@@ -18,9 +18,9 @@ while err > opts.tol
     
     
     % Compute gradient
-    [~, g] = f(x(1), x(2));
+    [~, g] = f(x);
     
-    fls = @(t)(f(x(1)- t*g(1), x(2) - t*g(2)));
+    fls = @(t)(f(x - t*g'));
     
     % Line search
     t = fminbnd(fls, 0, 1e1);

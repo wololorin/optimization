@@ -1,5 +1,7 @@
-function f = rosenbrock(x, y)
-if(nargin < 2)
+function [f, g] = rosenbrock(x)
+y = x(2);
+x = x(1);
+if(nargin < 1)
     f = @(x, y)(100*(x.^2-y).^2+(x-1).^2);
     ezsurf(f);
 else
